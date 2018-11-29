@@ -32,14 +32,16 @@ To check for similar passages in a target and source text with the default param
 
 Allowable parameters are viewable with the `-h` flag, and are as follows.
 
-| -s <file>    | path to **s**ource file                                                |
-| -t <file>    | path to **t**arget file                                                |
-| -w           | **w**indow in which to check for shared words                          |
-| -msw         | **m**inimum **s**hared **w**ords for a window to be considered a match |
-| -mwl         | **m**inimum **w**ord **l**ength for matched words                      |
-| -no          | allow for window matches which are **n**ot **o**rdered                 |
+|--------------|----------------------------------------------------------------------------|
+| -s <file>    | path to **s**ource file                                                    |
+| -t <file>    | path to **t**arget file                                                    |
+| -w           | **w**indow in which to check for shared words                              |
+| -msw         | **m**inimum **s**hared **w**ords for a window to be considered a match     |
+| -mwl         | **m**inimum **w**ord **l**ength for matched words                          |
+| -no          | allow for window matches which are **n**ot **o**rdered                     |
 | -stem        | **stem** all words in target and source texts before searching for matches |
 | -stop <file> | filter all **stop**words in a specified file                               |
+|--------------|----------------------------------------------------------------------------|
 
 ## TODO
 
