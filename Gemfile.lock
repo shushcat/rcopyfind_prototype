@@ -1,0 +1,24 @@
+PATH
+  remote: .
+  specs:
+    rcopyfind (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    damerau-levenshtein (1.3.1)
+    fast-stemmer (1.0.2)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.16)
+  damerau-levenshtein (~> 1.3)
+  fast-stemmer (~> 1.0)
+  rake (~> 10.0)
+  rcopyfind!
+
+BUNDLED WITH
+   1.16.4
