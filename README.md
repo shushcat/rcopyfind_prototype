@@ -32,6 +32,7 @@ To check for similar passages in a target and source text with the default param
 
 Allowable parameters are viewable with the `-h` flag, and are as follows.
 
+| Flag         | Description                                                                |
 |--------------|----------------------------------------------------------------------------|
 | -s <file>    | path to **s**ource file                                                    |
 | -t <file>    | path to **t**arget file                                                    |
@@ -41,7 +42,6 @@ Allowable parameters are viewable with the `-h` flag, and are as follows.
 | -no          | allow for window matches which are **n**ot **o**rdered                     |
 | -stem        | **stem** all words in target and source texts before searching for matches |
 | -stop <file> | filter all **stop**words in a specified file                               |
-|--------------|----------------------------------------------------------------------------|
 
 ## TODO
 
