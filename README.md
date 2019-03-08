@@ -4,7 +4,7 @@ This program compares pairs of text files to determine whether a source text is 
 
 ## Installation
 
-**WARNING: As of 2019-03, this C-extensions have not been implemented, so this is quite slow!**
+**WARNING: As of 2019-03, C extensions have not been implemented, so this is quite slow!**
 
 Add this line to your application's Gemfile:
 
