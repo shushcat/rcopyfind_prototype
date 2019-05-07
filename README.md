@@ -1,10 +1,10 @@
 # RCopyfind
 
-This program compares pairs of text files to determine whether a source text is likely to have influenced the author of a target text.  The algorithm used to compare texts is inspired by [WCopyfind](http://plagiarism.bloomfieldmedia.com/wordpress/software/wcopyfind/), but there are a few significant differences.  First, RCopyfind is implemented in Ruby with C-extensions, so is portable across platforms, whereas WCopyfind and it's command-line cousin Copyfind both only run on Windows as of September 2018.  Second, some additional functionality has been added to RCopyfind, making it somewhat more suitable to studies involving large corpora in which there are many spelling variations.  Specifically, RCopyfind uses [an implementation of the Porter stemmer](https://github.com/romanbsd/fast-stemmer) to remove some spelling differences, allows for filtering matches using a [stop word](https://en.wikipedia.org/wiki/Stop_words) list, and has preliminary support for matching words based on [edit distance](https://en.wikipedia.org/wiki/Edit_distance) using [a modified Levenshtein distance module](https://github.com/GlobalNamesArchitecture/damerau-levenshtein).
+This program compares pairs of text files to determine whether a source text is likely to have influenced the author of a target text.  The algorithm used to compare texts is inspired by [WCopyfind](http://plagiarism.bloomfieldmedia.com/wordpress/software/wcopyfind/), but there are a few significant differences.  First, RCopyfind is implemented in Ruby (with C-extensions for slow functions planned), so is portable across platforms, whereas WCopyfind and it's command-line cousin Copyfind both only run on Windows as of September 2018.  Second, some additional functionality has been added to RCopyfind, making it somewhat more suitable to studies involving large corpora in which there are many spelling variations.  Specifically, RCopyfind uses [an implementation of the Porter stemmer](https://github.com/romanbsd/fast-stemmer) to remove some spelling differences, allows for filtering matches using a [stop word](https://en.wikipedia.org/wiki/Stop_words) list, and has preliminary support for matching words based on [edit distance](https://en.wikipedia.org/wiki/Edit_distance) using [a modified Levenshtein distance module](https://github.com/GlobalNamesArchitecture/damerau-levenshtein).
 
 ## Installation
 
-**WARNING: As of 2019-03, C extensions have not been implemented, so this is quite slow!**
+**WARNING: As of 2019-05, installation as a Ruby Gem is broken!**
 
 Add this line to your application's Gemfile:
 
@@ -49,6 +49,7 @@ Allowable parameters are viewable with the `-h` flag, and are as follows.
 
 - [ ] Convert `get_shared_word_clusters` and `highlight` functions to C extensions, using the document at https://github.com/ruby/ruby/blob/trunk/doc/extension.rdoc as a reference.
 - [ ] Implement word comparison functions using the `damlev` function, enabling word matches by edit distance.
+- [ ] Setup Ruby Gem installation.
 
 ## Development
 
