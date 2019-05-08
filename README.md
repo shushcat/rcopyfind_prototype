@@ -50,6 +50,7 @@ Allowable parameters are viewable with the `-h` flag, and are as follows.
 - [ ] Convert `get_shared_word_clusters` and `highlight` functions to C extensions, using the document at https://github.com/ruby/ruby/blob/trunk/doc/extension.rdoc as a reference.
 - [ ] Implement word comparison functions using the `damlev` function, enabling word matches by edit distance.
 - [ ] Setup Ruby Gem installation.
+- [ ] Add instructions for use as a library.
 
 ## Development
 
