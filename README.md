@@ -51,6 +51,8 @@ Allowable parameters are viewable with the `-h` flag, and are as follows.
 - [ ] Implement word comparison functions using the `damlev` function, enabling word matches by edit distance.
 - [ ] Setup Ruby Gem installation.
 - [ ] Add instructions for use as a library.
+- [ ] Add a density function like that used by [Neidorf 2019](https://www.nature.com/articles/s41562-019-0570-1).
+    - A ratio of matching characters to overall character numbers.
 
 ## Development
 
