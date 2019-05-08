@@ -45,8 +45,12 @@ class Comparator < Text
                               .flatten.uniq.compact
       end
     end
-    return (uniqued_hash.keys.join.split('').length.to_f /
-            cmp.source.word_array.join.split('').length)
+    numer = 0
+    denom = cmp.source.word_array.join.split('').length.to_f
+    uniqued_hash.keys.each do |key|
+      numer += (key.split('').length * uniqued_hash[key].length) #
+    end
+    return (numer / denom)
   end
 
   def index_clusters(text1, text2, window, min_word_length, stopwords)
