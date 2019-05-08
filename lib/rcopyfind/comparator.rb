@@ -2,8 +2,8 @@ require 'rcopyfind/text'
 
 class Comparator < Text
 
-  attr_reader :similar_clusters, :source, :source_word_clusters,
-              :target, :target_word_clusters
+  attr_reader :density, :similar_clusters, :source,
+              :source_word_clusters, :target, :target_word_clusters
 
   def initialize(target, source, min_shared_words: 3,
                  ordered: true, window: 10, min_word_length: 4,
@@ -28,9 +28,26 @@ class Comparator < Text
       @target.unstem_word_array
       @source.unstem_word_array
     end
+    # @density = comparator_density
   end
 
   private
+
+  # Given a comparator, returns its "density" as the ratio of sums of
+  # the character counts of matching words in similar clusters in the
+  # source text to the number of characters in the source text as a
+  # whole
+  def comparator_density(cmp)
+    uniqued_hash = {}
+    cmp.similar_clusters.each do |cluster_pair|
+      cluster_pair[1].keys.each do |key|
+        uniqued_hash[key] = [uniqued_hash[key], cluster_pair[1][key]]
+                              .flatten.uniq.compact
+      end
+    end
+    return (uniqued_hash.keys.join.split('').length.to_f /
+            cmp.source.word_array.join.split('').length)
+  end
 
   def index_clusters(text1, text2, window, min_word_length, stopwords)
     intersection = text1.shared_words(text2, min_word_length)
