@@ -2,32 +2,6 @@
 
 This program compares pairs of text files to determine whether a source text is likely to have influenced the author of a target text.  The algorithm used to compare texts is inspired by [WCopyfind](http://plagiarism.bloomfieldmedia.com/wordpress/software/wcopyfind/), but there are a few significant differences.  First, RCopyfind is implemented in Ruby (with C-extensions for slow functions planned), so is portable across platforms, whereas WCopyfind and it's command-line cousin Copyfind both only run on Windows as of September 2018.  Second, some additional functionality has been added to RCopyfind, making it somewhat more suitable to studies involving large corpora in which there are many spelling variations.  Specifically, RCopyfind uses [an implementation of the Porter stemmer](https://github.com/romanbsd/fast-stemmer) to remove some spelling differences, allows for filtering matches using a [stop word](https://en.wikipedia.org/wiki/Stop_words) list, and has preliminary support for matching words based on [edit distance](https://en.wikipedia.org/wiki/Edit_distance) using [a modified Levenshtein distance module](https://github.com/GlobalNamesArchitecture/damerau-levenshtein).
 
-## Installation
-
-**WARNING: As of 2019-05, installation as a Ruby Gem is broken!**
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'rcopyfind'
-```
-
-And then execute:
-
-    $ bundle
-
-Or run it from the command line by executing:
-
-    $ ruby -Ilib ./bin/rcopyfind.rb
-
-from the RCopyfind directory.
-
-Later, you will be able to install it using:
-
-    $ gem rcopyfind
-
-Once installation from Rubygems is possible, will be callable directly, i.e. with the command `rcopyfind`.
-
 ## Usage
 
 To check for similar passages in a target and source text with the default parameters, run the command `rcopyfind.rb -t <target file> -s <source file>`.
