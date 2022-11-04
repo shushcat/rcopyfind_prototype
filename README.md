@@ -1,4 +1,4 @@
-**RCopyfind is currently being rewritten in Rust at https://github.com/shushcat/rcopyfind.  This repository is unmaintained.**
+**RCopyfind is currently being rewritten at https://github.com/shushcat/rcopyfind.  This repository is unmaintained.**
 
 # RCopyfind
 
